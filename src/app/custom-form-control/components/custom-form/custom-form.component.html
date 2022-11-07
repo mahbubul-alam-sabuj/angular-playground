@@ -1,1 +1,3 @@
-<p>custom-form works!</p>
+<form *ngIf="form" [formGroup]="form">
+  <app-country-selector formControlName="country"></app-country-selector>
+</form>
