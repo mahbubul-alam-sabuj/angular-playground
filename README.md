@@ -1,6 +1,6 @@
 #Angular Playground
 
-#Resources Followed:
+**Resources Followed:**
 
 <ul>
   <li> https://sreyaj.dev/custom-form-controls-controlvalueaccessor-in-angular </li>
