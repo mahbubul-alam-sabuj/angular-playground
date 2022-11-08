@@ -8,6 +8,7 @@ const COUNTRY_CONTROL_VALUE_ACCESSOR: Provider = {
   useExisting: forwardRef(() => CountrySelectorComponent),
   multi: true,
 };
+
 @Component({
   selector: 'app-country-selector',
   templateUrl: './country-selector.component.html',
@@ -44,12 +45,12 @@ export class CountrySelectorComponent implements ControlValueAccessor, OnInit {
     this.selected = value ?? '';
   }
 
-  registerOnChange(fn: Function): void {
-    this.onChange = fn;
+  registerOnChange(onChange: Function): void {
+    this.onChange = onChange;
   }
 
-  registerOnTouched(fn: Function): void {
-    this.onTouched = fn;
+  registerOnTouched(onTouched: Function): void {
+    this.onTouched = onTouched;
   }
 
   setDisabledState?(isDisabled: boolean): void {
