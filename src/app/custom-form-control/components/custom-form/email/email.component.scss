@@ -1,0 +1,13 @@
+.input-wrapper {
+  input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+  input[type=email]:focus {
+    background-color: yellow;
+    ;
+  }
+}

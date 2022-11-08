@@ -1,3 +1,12 @@
-<form *ngIf="form" [formGroup]="form">
+<form *ngIf="form" [formGroup]="form" class="form">
   <app-country-selector formControlName="country"></app-country-selector>
+  <app-email formControlName="email"></app-email>
+  <button
+    type="submit"
+    class="submit-btn"
+    (click)="onFormSubmit()"
+    [disabled]="form.invalid"
+  >
+    <span> Submit </span>
+  </button>
 </form>

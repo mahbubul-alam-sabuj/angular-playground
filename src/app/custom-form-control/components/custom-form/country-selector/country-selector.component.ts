@@ -16,9 +16,9 @@ const COUNTRY_CONTROL_VALUE_ACCESSOR: Provider = {
 })
 export class CountrySelectorComponent implements ControlValueAccessor, OnInit {
   countries: Country[] = [
-    { code: 'IN', name: 'India' },
+    { code: 'BN', name: 'Bangladesh' },
     { code: 'US', name: 'United States' },
-    { code: 'GB-ENG', name: 'England' },
+    { code: 'IN', name: 'India' },
     { code: 'NL', name: 'Netherlands' },
   ];
 
@@ -28,7 +28,7 @@ export class CountrySelectorComponent implements ControlValueAccessor, OnInit {
 
   private onTouched: Function | null = null;
 
-  private onChanged: Function | null = null;
+  private onChange: Function | null = null;
 
   constructor() {}
 
@@ -37,7 +37,7 @@ export class CountrySelectorComponent implements ControlValueAccessor, OnInit {
   onCountrySelect(value: string) {
     this.selected = value;
     if (this.onTouched) this.onTouched();
-    if (this.onChanged) this.onChanged(value);
+    if (this.onChange) this.onChange(value);
   }
 
   writeValue(value: string): void {
@@ -45,7 +45,7 @@ export class CountrySelectorComponent implements ControlValueAccessor, OnInit {
   }
 
   registerOnChange(fn: Function): void {
-    this.onChanged = fn;
+    this.onChange = fn;
   }
 
   registerOnTouched(fn: Function): void {
