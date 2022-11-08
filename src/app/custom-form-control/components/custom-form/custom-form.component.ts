@@ -21,7 +21,11 @@ export class CustomFormComponent implements OnInit {
 
   buildForm(): void {
     this.form = this.fb.group({
-      country: ['', Validators.required],
+      country: new FormControl('', [Validators.required]),
+      email: new FormControl('', [Validators.required, Validators.email]),
     });
+  }
+  onFormSubmit(): void {
+    console.warn(this.form);
   }
 }

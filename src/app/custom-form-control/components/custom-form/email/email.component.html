@@ -1,0 +1,10 @@
+<ng-container>
+  <div class="input-wrapper">
+    <input
+      type="email"
+      [disabled]="isDisabled"
+      placeholder="Enter your email"
+      (keyup)="handleEmailChange($event)"
+    />
+  </div>
+</ng-container>
