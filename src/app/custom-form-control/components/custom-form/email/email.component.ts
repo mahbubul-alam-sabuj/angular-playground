@@ -37,12 +37,12 @@ export class EmailComponent implements ControlValueAccessor, OnInit {
     this.email = value ?? '';
   }
 
-  registerOnChange(fn: Function): void {
-    this.onChange = fn;
+  registerOnChange(onChange: Function): void {
+    this.onChange = onChange;
   }
 
-  registerOnTouched(fn: Function): void {
-    this.onTouched = fn;
+  registerOnTouched(onTouched: Function): void {
+    this.onTouched = onTouched;
   }
 
   setDisabledState?(isDisabled: boolean): void {
