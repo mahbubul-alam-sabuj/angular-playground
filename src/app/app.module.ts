@@ -4,10 +4,11 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { CustomFormControlModule } from './custom-form-control/custom-form-control.module';
+import { ThemeService } from './shared/services/theme.service';
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, AppRoutingModule, CustomFormControlModule],
-  providers: [],
+  providers: [ThemeService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
